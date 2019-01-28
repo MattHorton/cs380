@@ -1,0 +1,5 @@
+#lang eopl
+
+(define (prism-volume xs ys zs)
+  (let ([base-area (* xs ys)])
+    (* zs base-area)))
