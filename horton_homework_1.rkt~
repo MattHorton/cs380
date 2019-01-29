@@ -24,19 +24,3 @@
 
 (define (theta1 d)
   (degrees->radians d))
-
-; 5. (duple n x) returns a list containing n copies of x
-(define (duple n x)
-  (if (equal? n 0)'()
-  (cons x (duple (- n 1) x))))
-
-; 6. (down lst) wraps parenthesis around each top-level element of lst
-(define (down lst)
-  (if (null? lst) '()
-      (cons (list (car lst)) (down (cdr lst)))))
-
-; 7. (list-set lst n x) returns a list like lst, except that the nth element using zero-based indexing is x
-(define (list-set lst n x)
-  (if (null? lst) '()
-      (if (equal? n 0) (cons x lst)
-          (cons (car lst) (list-set (cdr lst) (- n 1) x)))))

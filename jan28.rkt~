@@ -1,0 +1,11 @@
+#lang eopl
+
+
+;; datatype to represent lambda-calculus expressions
+
+(define-datatype lc-exp lc-exp?
+  [var-exp (var symbol?)] ;; this represents variable expressions
+  [lambda-exp (bound-var symbol?)
+              (body lc-exp?)]
+  [apply-exp (func lc-exp?)
+             (arg lc-exp?)])
